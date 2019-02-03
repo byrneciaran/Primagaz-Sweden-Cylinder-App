@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:text="@string/button_find_printers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/primaryText"
+        android:background="#2979FF"
+        android:textColor="@color/white"
+        android:layout_margin="8dp"
+        android:id="@+id/findPrintersButton" />
+    <ProgressBar
+        android:progressDrawable="@drawable/progress"
+        android:layout_below="@+id/findPrintersButton"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="true"
+        android:id="@+id/progressBar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/placeholder"
+        android:layout_below="@+id/progressBar"
+        android:background="@color/backgroundColor">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_no_printers"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/titleTextView"
+            android:textColor="@color/secondaryTextColor" />
+        <TextView
+            android:layout_below="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_no_printers_details"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/secondaryTextColor" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        android:id="@+id/recyclerView" />
+</RelativeLayout>

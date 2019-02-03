@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin"
+    android:layout_marginRight="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    app:contentPaddingBottom="24dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="2dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/cylinderImageView"
+            android:layout_width="80dp"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerInside"
+            android:layout_height="80dp" />
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:textSize="24dp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/cylinderImageView"
+            android:layout_marginRight="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="24dp"
+            android:paddingLeft="16dp" />
+        <TextView
+            android:id="@+id/fullsTextView"
+            android:layout_below="@+id/descriptionTextView"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp" />
+        <TextView
+            android:id="@+id/emptiesCollectedTextView"
+            android:layout_below="@+id/fullsTextView"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp" />
+        <TextView
+            android:id="@+id/faultyFullsTextView"
+            android:layout_below="@+id/emptiesCollectedTextView"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp" />
+        <TextView
+            android:id="@+id/faultyEmptiesTextView"
+            android:layout_below="@+id/faultyFullsTextView"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp" />
+        <TextView
+            android:id="@+id/fullsCollectedTextView"
+            android:layout_below="@+id/faultyEmptiesTextView"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp" />
+          <TextView
+            android:id="@+id/emptiesDeliveredTextView"
+            android:layout_below="@+id/fullsCollectedTextView"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp" />
+                  <TextView
+            android:id="@+id/orderedTextView"
+            android:layout_below="@+id/emptiesDeliveredTextView"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+             android:paddingBottom="8dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

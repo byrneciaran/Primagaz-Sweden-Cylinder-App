@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:minHeight="148dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingLeft="16dp"
+            android:id="@+id/runNameTextView"
+            android:textSize="21sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MS-Onsdag"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentTop="true"
+            android:paddingTop="16dp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <TextView
+            android:paddingLeft="16dp"
+            android:id="@+id/runNumberTextView"
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="28dp"
+            android:gravity="bottom"
+            android:text="ER3901259"
+            android:layout_below="@+id/runNameTextView"
+            android:layout_marginRight="16dp"
+            android:textColor="#232F34" />
+        <TextView
+            android:paddingLeft="16dp"
+            android:id="@+id/runDateTextView"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15/06/18"
+            android:layout_below="@+id/runNumberTextView"
+            android:layout_marginRight="16dp"
+            android:textColor="#232F34" />
+        <Button
+            android:id="@+id/editRunButton"
+            android:text="EDIT"
+            android:minWidth="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@null"
+            android:textColor="#2979FF"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/runDateTextView" />
+        <Button
+            android:id="@+id/closeRunButton"
+            android:text="@string/button_close"
+            android:minWidth="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@null"
+            android:textColor="#2979FF"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/editRunButton"
+            android:layout_below="@+id/runDateTextView" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+		<item name="android:statusBarColor">@color/primaryDarkColor</item>
+		<item name="android:colorPrimary">@color/primaryColor</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowBackground">@color/white</item>
+	</style>
+	<style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+		<item name="colorPrimary">@color/primaryColor</item>
+		<item name="colorPrimaryDark">@color/primaryDarkColor</item>
+		<item name="colorAccent">@color/secondaryColor</item>
+		<item name="android:windowBackground">@color/white</item>
+		<item name="colorControlNormal">@color/primaryDarkColor</item>
+		<item name="colorControlActivated">@color/white</item>
+		<item name="colorControlHighlight">@color/white</item>
+		<item name="android:textColorHint">@color/primaryDarkColor</item>
+		<item name="colorButtonNormal">@color/primaryDarkColor</item>
+		<item name="android:colorButtonNormal">@color/primaryDarkColor</item>
+	</style>
+	<style name="income" parent="TextAppearance.AppCompat">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textColorHint">@color/white</item>
+		<item name="colorAccent">@color/white</item>
+		<item name="colorControlNormal">@color/white</item>
+		<item name="colorControlActivated">@color/white</item>
+		<item name="colorControlHighlight">@color/white</item>
+		<item name="android:textColorHighlight">@color/white</item>
+	</style>
+	<style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
+		<item name="colorAccent">@color/white</item>
+		<item name="android:textColorPrimary">@color/primaryDarkColor</item>
+		<item name="android:background">@color/primaryColor</item>
+	</style>
+	<style name="AppTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@drawable/splash_screen</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+	</style>
+	<style name="customProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+		<item name="colorAccent">@color/primaryDarkColor</item>
+	</style>
+	<style name="tile">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:paddingLeft">16dp</item>
+		<item name="android:paddingRight">16dp</item>
+		<item name="android:paddingTop">12dp</item>
+		<item name="android:paddingBottom">16dp</item>
+	</style>
+</resources>

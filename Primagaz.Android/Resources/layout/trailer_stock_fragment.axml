@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+                        android:background="#E2E2E2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Spinner
+        android:id="@+id/trailersSpinner"
+         android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetLayout"
+        android:layout_below="@+id/trailersSpinner"
+        android:orientation="horizontal">
+                    <Button
+            android:id="@+id/clearEmptiesButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/button_reset_empties"
+            android:layout_marginRight="16dp"
+            android:background="#2979FF"
+            android:textColor="@color/white" />
+                <Button
+            android:id="@+id/clearFullsButton"
+            android:layout_width="0dp"
+             android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/button_reset_fulls"
+            android:background="#2979FF"
+            android:textColor="@color/white" />
+        
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/resetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E2E2E2"
+        android:id="@+id/recyclerView" />
+</RelativeLayout>

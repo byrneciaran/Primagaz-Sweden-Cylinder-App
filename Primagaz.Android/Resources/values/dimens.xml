@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="title_font">18dp</dimen>
+    <dimen name="description_font">16dp</dimen>
+    <dimen name="small_font">12dp</dimen>
+	<dimen name="primaryText">16dp</dimen>
+	<dimen name="secondaryText">14dp</dimen>
+	<dimen name="paddingBottom">20dp</dimen>
+</resources>

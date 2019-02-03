@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:minHeight="148dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/cylinderImageView"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:layout_height="80dp" />
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:textSize="21sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MS-Onsdag"
+            android:paddingLeft="16dp"
+            android:layout_toLeftOf="@+id/cylinderImageView"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentTop="true"
+            android:paddingTop="16dp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/fullsTextView"
+            android:layout_below="@+id/descriptionTextView"
+            android:layout_toLeftOf="@+id/cylinderImageView"
+            android:layout_marginRight="16dp"
+            android:textSize="17dp"
+            android:gravity="bottom"
+            android:minHeight="28dp"
+            android:paddingLeft="16dp"
+            android:textColor="#232F34"
+            android:text="10 Fulls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/emptiesTextView"
+            android:layout_below="@+id/fullsTextView"
+            android:layout_toLeftOf="@+id/cylinderImageView"
+            android:layout_marginRight="16dp"
+            android:textSize="17dp"
+            android:paddingLeft="16dp"
+            android:textColor="#232F34"
+            android:text="20 Empties"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/faultyFullsTextView"
+            android:layout_below="@+id/emptiesTextView"
+            android:layout_toLeftOf="@+id/cylinderImageView"
+            android:layout_marginRight="16dp"
+            android:textSize="17dp"
+            android:paddingLeft="16dp"
+            android:textColor="#232F34"
+            android:text="20 Empties"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/faultyEmptiesTextView"
+            android:layout_below="@+id/faultyFullsTextView"
+            android:layout_toLeftOf="@+id/cylinderImageView"
+            android:layout_marginRight="16dp"
+            android:textSize="17dp"
+            android:paddingLeft="16dp"
+            android:textColor="#232F34"
+            android:text="20 Empties"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/orderedTextView"
+            android:layout_below="@+id/faultyEmptiesTextView"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="15dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16 Ordered"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

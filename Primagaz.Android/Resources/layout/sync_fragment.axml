@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/syncButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Synchronise"
+        android:layout_margin="16dp"
+        android:background="#2979FF"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/lastSyncTextView"
+        android:layout_below="@+id/syncButton"
+        android:text="Last Synced At: 22/01/18 14:32"
+        android:layout_width="match_parent"
+        android:textSize="18dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/connectivityTextView"
+        android:layout_below="@+id/lastSyncTextView"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:textSize="18dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

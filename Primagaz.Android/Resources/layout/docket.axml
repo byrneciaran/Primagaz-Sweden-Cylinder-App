@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:minHeight="148dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+                    <ImageView
+                android:id="@+id/statusImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="8dp"
+                android:tint="@color/deliveredColor"
+                android:src="@drawable/baseline_check_circle_outline_24" />
+        <TextView
+            android:paddingLeft="16dp"
+            android:id="@+id/accountNameTextView"
+            android:textSize="21sp"
+            android:text="Ciaran Byrne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/statusImageView"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentTop="true"
+            android:paddingTop="16dp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <TextView
+            android:paddingLeft="16dp"
+            android:id="@+id/addressTextView"
+            android:textSize="17sp"
+             android:text="12B Albert College Park, Glasnevin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="28dp"
+            android:gravity="bottom"
+            android:layout_below="@+id/accountNameTextView"
+            android:layout_toLeftOf="@+id/statusImageView"
+            android:layout_marginRight="16dp"
+            android:textColor="#232F34" />
+        <TextView
+            android:paddingLeft="16dp"
+            android:text="123456789"
+            android:id="@+id/docketNumberTextView"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addressTextView"
+            android:layout_toLeftOf="@+id/statusImageView"
+            android:layout_marginRight="16dp"
+            android:textColor="#232F34" />
+                        <TextView
+            android:paddingLeft="16dp"
+            android:text="UNCONFIRMED"
+            android:id="@+id/unconfirmedTextView"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+                        android:layout_below="@+id/docketNumberTextView"
+            android:textColor="@color/offline" />
+        <Button
+            android:id="@+id/printButton"
+            android:text="@string/button_print"
+            android:minWidth="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@null"
+            android:textColor="#2979FF"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_below="@+id/unconfirmedTextView"
+            android:layout_marginTop="8dp" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

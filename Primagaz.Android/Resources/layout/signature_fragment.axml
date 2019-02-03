@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/customerNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_customer_name"
+            android:maxLines="1"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:inputType="text|textCapWords"
+            android:layout_marginTop="16dp" />
+        <xamarin.controls.SignaturePadView
+            android:id="@+id/signatureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAFAFA"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+                    android:clickable="true"
+            android:layout_below="@+id/customerNameEditText"
+            android:layout_above="@+id/confirmButton" />
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_confirm_delivery"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentBottom="true"
+            android:background="#2979FF"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</ScrollView>

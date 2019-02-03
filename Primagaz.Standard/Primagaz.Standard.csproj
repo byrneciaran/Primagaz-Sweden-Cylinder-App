@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Autofac.Extras.CommonServiceLocator" Version="5.0.0" />
+    <PackageReference Include="Otp.NET" Version="1.2.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Db.cs" />
+    <Compile Remove="Repository\CallsRepo.cs" />
+    <Compile Remove="Entities\Tombstone.cs" />
+    <Compile Remove="Service\CallLogService.cs" />
+    <Compile Remove="RealmFactory.cs" />
+  </ItemGroup>
+</Project>

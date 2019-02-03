@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/runNameEditText"
+        android:padding="@dimen/padding"
+        android:typeface="normal"
+        android:hint="@string/text_run_name"
+        android:cursorVisible="true"
+        android:background="@color/white"
+        android:maxLength="14"
+        android:maxLines="1"
+        android:inputType="text|textNoSuggestions|textCapSentences"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginBottom="@dimen/margin" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/placeholder"
+        android:background="@color/greyLightColor"
+        android:layout_below="@+id/runNameEditText">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_no_customers"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/titleTextView"
+            android:textColor="@color/secondaryTextColor" />
+        <TextView
+            android:layout_below="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_no_customers_details"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/secondaryTextColor" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/runNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:background="@color/greyLightColor" />
+    <android.support.design.widget.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/addCustomerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:tint="#FFFFFF"
+        app:backgroundTint="@color/primaryColor"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_white_24dp" />
+</RelativeLayout>

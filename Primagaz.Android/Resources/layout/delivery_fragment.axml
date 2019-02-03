@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderRefEditText"
+        android:padding="@dimen/padding"
+        android:typeface="normal"
+        android:hint="@string/text_order_ref"
+        android:maxLines="1"
+        android:cursorVisible="true"
+        android:background="@color/white"
+        android:maxLength="25"
+        android:inputType="text|textNoSuggestions|textCapSentences"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginBottom="@dimen/margin"
+        android:fontFamily="sans-serif-light" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/orderRefEditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:background="@color/greyLightColor" />
+</RelativeLayout>

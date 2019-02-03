@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/filterEditText"
+        android:padding="@dimen/padding"
+        android:typeface="normal"
+        android:hint="@string/text_search"
+        android:cursorVisible="true"
+        android:background="@color/white"
+        android:maxLines="1"
+        android:inputType="text|textNoSuggestions"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginBottom="@dimen/margin" />
+    <RelativeLayout
+        android:layout_below="@+id/filterEditText"
+        android:layout_width="match_parent"
+        android:padding="@dimen/padding"
+        android:background="@color/white"
+        android:id="@+id/ordersOnlyLayout"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderTextView"
+            android:layout_marginRight="@dimen/padding"
+            android:typeface="normal"
+            android:text="@string/check_orders_only"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/ordersOnlyCheckBox"
+            android:fontFamily="sans-serif-light" />
+        <CheckBox
+            android:id="@+id/ordersOnlyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="0dp"
+            android:layout_marginLeft="-8dp"
+            android:text="@null" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/ordersOnlyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        android:id="@+id/recyclerView" />
+</RelativeLayout>

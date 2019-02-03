@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	    <item android:id="@+id/printer_menu_item" android:title="@string/nav_printer" />
+        <item android:id="@+id/edit_trailer_menu_item" android:title="@string/nav_stock" />
+     <item android:id="@+id/dockets_menu_item" android:title="@string/nav_print_docket" />
+     <item android:id="@+id/sync_menu_item" android:title="@string/nav_sync" />
+    <item android:id="@+id/support_menu_item" android:title="@string/nav_support" />
+       <item android:id="@+id/logout_menu_item" android:title="@string/nav_logout" />
+</menu>

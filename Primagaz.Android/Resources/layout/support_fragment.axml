@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/technicalSupportButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_technical_support"
+        android:layout_margin="16dp"
+        android:background="#2979FF"
+        android:textColor="@color/white" />
+        <Button
+        android:id="@+id/generalSupportButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_general_support"
+        android:layout_margin="16dp"
+        android:background="#2979FF"
+        android:layout_below="@+id/technicalSupportButton"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white" />
+        <TextView
+        android:id="@+id/deviceIdTextView"
+        android:layout_width="match_parent"
+        android:textSize="18dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="16dp"
+        android:layout_above="@+id/uploadDatabaseButton"
+        android:layout_height="wrap_content" />
+            <Button
+        android:id="@+id/uploadDatabaseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_upload_database"
+        android:layout_margin="16dp"
+        android:background="#2979FF"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white" />
+</RelativeLayout>
