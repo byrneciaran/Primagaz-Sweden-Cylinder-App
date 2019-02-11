@@ -5,8 +5,8 @@ namespace Primagaz.Android.Sync
 {
 	public static class AccountUtils
     {
-        public const string SyncAuthority = "io.clickahead.primagaz.provider";
-        public const string AccountType = "io.clickahead.primagaz";
+        public const string SyncAuthority = "se.primagaz.cylinder.provider";
+        public const string AccountType = "se.primagaz.cylinder";
         public const string Account = "primagaz";
 
         public static Account CreateSyncAccount(Context context)

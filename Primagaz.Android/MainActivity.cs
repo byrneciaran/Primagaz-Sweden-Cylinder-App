@@ -47,7 +47,7 @@ namespace Primagaz.Android
         NavigationView _navigationView;
         DrawerLayout _drawerLayout;
 
-        const string AppSecret = "940a2708-94be-4a1c-ae5c-c2c98efeac8a";
+        const string AppSecret = "681514df-a4c7-4c62-a7be-0829cdbb5c84";
         const int RequestPermissionsResult = 1000;
 
         // Poll Frequency for Sync Adapter is 3600 Seconds = 1 Hour

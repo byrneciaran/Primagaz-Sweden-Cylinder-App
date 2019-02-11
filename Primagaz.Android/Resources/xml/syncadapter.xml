@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <sync-adapter
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:contentAuthority="io.clickahead.primagaz.provider"
-        android:accountType="io.clickahead.primagaz"
+        android:contentAuthority="se.primagaz.cylinder.provider"
+        android:accountType="se.primagaz.cylinder"
         android:userVisible="false"
         android:supportsUploading="true"
         android:allowParallelSyncs="false"

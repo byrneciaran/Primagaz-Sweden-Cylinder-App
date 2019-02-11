@@ -403,6 +403,7 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="google-services.json" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\empty_menu.xml" />
@@ -517,21 +518,20 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\palle_11.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\palle_5.png" />
     <AndroidResource Include="Resources\layout\support_fragment.axml" />
+    <AndroidResource Include="Resources\values-sv\strings.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\values-sv\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Primagaz.Standard\Primagaz.Standard.csproj">
       <Project>{BC7FBA51-E224-4826-9772-FEE2DC103342}</Project>
       <Name>Primagaz.Standard</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />

@@ -4,7 +4,7 @@ using Android.Database;
 
 namespace Primagaz.Android.Sync
 {
-    [ContentProvider(new[] { "io.clickahead.primagaz.provider" }, Exported = true, Syncable = true)]
+    [ContentProvider(new[] { "se.primagaz.cylinder.provider" }, Exported = true, Syncable = true)]
     public class StubProvider : ContentProvider
     {
         public override int Delete(global::Android.Net.Uri uri, string selection, string[] selectionArgs)

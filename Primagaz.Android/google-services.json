@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "1013646997633",
-    "firebase_url": "https://primagaz-cylinder-app.firebaseio.com",
-    "project_id": "primagaz-cylinder-app",
-    "storage_bucket": "primagaz-cylinder-app.appspot.com"
+    "project_number": "582542307827",
+    "firebase_url": "https://primagaz-sweden-cylinder-app.firebaseio.com",
+    "project_id": "primagaz-sweden-cylinder-app",
+    "storage_bucket": "primagaz-sweden-cylinder-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1013646997633:android:99b99769d888d0d0",
+        "mobilesdk_app_id": "1:582542307827:android:940d73a1578f8065",
         "android_client_info": {
-          "package_name": "io.clickahead.primagaz"
+          "package_name": "se.primagaz.cylinder"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1013646997633-66scffjf7seb1ra1ct5d9kveglucfsrt.apps.googleusercontent.com",
+          "client_id": "582542307827-9cecr5t5jrilvirb10k4r4bh9u020pgs.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCjQzm1Qui68MHFrDFAN0-4T-q7XPkNW9M"
+          "current_key": "AIzaSyA2_J07BHNXFOObK4RUV8Azm0jGNZ2Yfa8"
         }
       ],
       "services": {

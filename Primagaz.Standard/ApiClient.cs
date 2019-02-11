@@ -18,11 +18,11 @@ namespace Primagaz.Standard
 {
     public sealed class ApiClient
     {
-        //const string BaseUrl = "http://handheld.primagaz.dk/api/sync";
+        const string BaseUrl = "http://handheld.primagaz.dk/swedenapi/sync";
 
-        //const string BaseUrl = "http://192.168.1.103:3003/api/sync";
+        //const string BaseUrl = "http://192.168.8.104:3003/api/sync";
 
-        const string BaseUrl = "https://mobile.primagaz.dk/api/sync";
+        //const string BaseUrl = "https://mobile.primagaz.dk/api/sync";
 
         private const int TimeoutInMinutes = 2;
 

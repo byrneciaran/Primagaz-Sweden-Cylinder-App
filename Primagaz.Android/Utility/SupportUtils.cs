@@ -38,7 +38,7 @@ namespace Primagaz.Android
                 var date = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss");
 
                 var databaseFile = Repository.GetDatabasePath();
-                var zipFile = $"/data/user/0/io.clickahead.primagaz/files/{profile.SubscriberID}_{date}.zip";
+                var zipFile = $"/data/user/0/se.primagaz.cylinder/files/{profile.SubscriberID}_{date}.zip";
 
                 using (var fileStream = new FileStream(zipFile, FileMode.OpenOrCreate, FileAccess.ReadWrite))
                 {
