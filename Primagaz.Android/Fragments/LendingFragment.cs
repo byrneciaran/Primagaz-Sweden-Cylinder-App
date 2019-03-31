@@ -136,7 +136,7 @@ namespace Primagaz.Android
         /// </summary>
         void PrintLending()
         {
-            var label = LabelTemplates.GetDenmarkLendingLabel(_lending.ToList());
+            var label = LabelTemplates.GetLendingLabel(_lending.ToList());
 
             var profile = _repository.Profiles.First();
             var device = _repository.MobileDevices.First();

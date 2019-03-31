@@ -288,7 +288,7 @@ namespace Primagaz.Android
         {
             var onStopCustomers = _repository.Customers.Where(x => x.OnStop).ToList();
 
-            var onStopLabel = LabelTemplates.GetDenmarkOnStopLabel(onStopCustomers);
+            var onStopLabel = LabelTemplates.GetOnStopLabel(onStopCustomers);
 
             var profile = _repository.Profiles.First();
             var device = _repository.MobileDevices.First();

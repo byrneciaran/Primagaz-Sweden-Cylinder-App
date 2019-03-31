@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using Primagaz.Standard.Entities;
 using System.Globalization;
 using System.Linq;
-using System.Collections;
-using System.Drawing;
 
 namespace Primagaz.Android
 {
@@ -19,7 +17,7 @@ namespace Primagaz.Android
         /// </summary>
         /// <returns>The denmark lending label.</returns>
         /// <param name="lending">Lending.</param>
-        public static string GetDenmarkLendingLabel(List<LendingStatus> lending)
+        public static string GetLendingLabel(List<LendingStatus> lending)
         {
             const decimal dcItemVerticalOffset = 0.4M;
             const decimal dcSmallLineOffset = 0.1M;
@@ -45,13 +43,13 @@ namespace Primagaz.Android
             label.AppendFormat(LabelCulture, "L 0.5 {0} 10 {0} 0.03\r\n", dcVerticalOffset);
 
             dcVerticalOffset = dcVerticalOffset + dcItemVerticalOffset;
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", dcVerticalOffset, "Før denne levering er udlånssaldoen:");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", dcVerticalOffset, "Före denna leverans är lånebalansen:");
 
             dcVerticalOffset = dcVerticalOffset + 0.2M;
             dcVerticalOffset = dcVerticalOffset + (dcItemVerticalOffset * 2);
 
             //dcVerticalOffset = dcVerticalOffset + (dcItemVerticalOffset * 2);
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", dcVerticalOffset, "Flaske");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", dcVerticalOffset, "Flaska");
             label.Append("RIGHT 4\r\n");
             label.AppendFormat(LabelCulture, "T 5 0 2.3 {0} {1}\r\n", dcVerticalOffset, "Stk");
 
@@ -77,7 +75,7 @@ namespace Primagaz.Android
             label.AppendFormat(LabelCulture, "L 0.5 {0} 5 {0} 0.03\r\n", dcVerticalOffset);
 
             dcVerticalOffset = dcVerticalOffset + dcLargeLineOffset;
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", dcVerticalOffset, "Saldo");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", dcVerticalOffset, "Totalt");
 
             label.Append("RIGHT 4\r\n");
             label.AppendFormat(LabelCulture, "T 5 0 2.3 {0} {1}\r\n", dcVerticalOffset,
@@ -89,15 +87,15 @@ namespace Primagaz.Android
 
             dcVerticalOffset = dcVerticalOffset + dcItemVerticalOffset;
             label.AppendFormat(LabelCulture, "T 5 0.5 0.5 {0} {1}\r\n", dcVerticalOffset,
-                               "Kontakt os venligst indenfor 1 uge på kundeservice@primagaz.dk,");
+                                 "Kontakta oss inom 1 vecka kundeservice@primagaz.se,");
 
             dcVerticalOffset = dcVerticalOffset + dcItemVerticalOffset;
             label.AppendFormat(LabelCulture, "T 5 0.5 0.5 {0} {1}\r\n", dcVerticalOffset,
-                               "hvis udlånsbeholdningen ikke stemmer");
+                                    "om låneportföljen inte röstar");
 
             dcVerticalOffset = dcVerticalOffset + dcItemVerticalOffset;
             label.AppendFormat(LabelCulture, "T 5 0.5 0.5 {0} {1}\r\n", dcVerticalOffset,
-                               "Ellers betragtes udlånssaldoen som gældende.");
+                               "I annat fall anses lånebalansen vara tillämplig.");
 
             dcVerticalOffset = dcVerticalOffset + dcItemVerticalOffset;
 
@@ -137,8 +135,8 @@ namespace Primagaz.Android
             label.Append("IN-CENTIMETERS\r\n");
             label.Append("CENTER\r\n");
 
-            label.AppendFormat(LabelCulture, "T 4 0 0 0.1 {0}\r\n", "Primagaz Danmark A/S");
-            label.AppendFormat(LabelCulture, "T 4 0 0 0.8 {0}\r\n", "Følgeseddel");
+            label.AppendFormat(LabelCulture, "T 4 0 0 0.1 {0}\r\n", "Primagaz Sverige AB");
+            label.AppendFormat(LabelCulture, "T 4 0 0 0.8 {0}\r\n", "Följesedel");
 
             label.Append("LEFT\r\n");
             label.AppendFormat(LabelCulture, "L 0.5 1.7 10 1.7 0.05\r\n");
@@ -146,10 +144,10 @@ namespace Primagaz.Android
             // Header - Line 1
             label.AppendFormat(LabelCulture, "T 5 0 0.5 2.1 {0}:\r\n", "Dok. nr.");
             label.AppendFormat(LabelCulture, "T 5 0 2.7 2.1 {0}\r\n", docket.DocketID);
-            label.AppendFormat(LabelCulture, "T 5 0 5.8 2.1 {0}:\r\n", "Afsender");
+            label.AppendFormat(LabelCulture, "T 5 0 5.8 2.1 {0}:\r\n", "Avsändare");
 
             // Header - Line 2
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 2.5 {0}:\r\n", "Dato");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 2.5 {0}:\r\n", "Datum");
             label.AppendFormat(LabelCulture, "T 5 0 2.7 2.5 {0}\r\n", docket.FormattedDateModified);
             label.AppendFormat(LabelCulture, "T 5 0 5.8 2.5 {0}\r\n", docket.SubscriberDisplayName);
 
@@ -159,18 +157,18 @@ namespace Primagaz.Android
             label.AppendFormat(LabelCulture, "T 5 0 5.8 2.9 {0}\r\n", docket.SubscriberAddress);
 
             // Header - Line 4
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 3.3 {0}:\r\n", "Order");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 3.3 {0}:\r\n", "Order nr");
             label.AppendFormat(LabelCulture, "T 5 0 2.7 3.3 {0}\r\n", docket.OrderNumber);
             label.AppendFormat(LabelCulture, "T 5 0 5.8 3.3 {0} {1}\r\n", docket.SubscriberPostCode,
                 docket.SubscriberCity);
 
             // Header - Line 5
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 3.7 {0}:\r\n", "Kunde rekv");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 3.7 {0}:\r\n", "Kund ref");
             label.AppendFormat(LabelCulture, "T 5 0 2.7 3.7 {0}\r\n", docket.OrderReference);
 
             label.AppendFormat(LabelCulture, "L 0.5 4.1 10 4.1 0.05\r\n");
 
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 4.5 {0}:\r\n", "Modtager");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 4.5 {0}:\r\n", "Mottagare");
             label.AppendFormat(LabelCulture, "T 5 0 2.7 4.5 {0}\r\n", docket.CustomerAccountNumber);
             label.AppendFormat(LabelCulture, "T 5 0 2.7 4.9 {0}\r\n", docket.CustomerName1);
             label.AppendFormat(LabelCulture, "T 5 0 2.7 5.3 {0}\r\n", docket.AddressLine1);
@@ -192,7 +190,7 @@ namespace Primagaz.Android
             if (docketItems.Any())
             {
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
-                label.AppendFormat(LabelCulture, "T 4 0 0.5 {0} {1}\r\n", verticalOffset, "Leverance");
+                label.AppendFormat(LabelCulture, "T 4 0 0.5 {0} {1}\r\n", verticalOffset, "Leverans detaljer");
                 label.Append("CENTER 2.9\r\n");
 
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
@@ -201,18 +199,18 @@ namespace Primagaz.Android
 
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
                 label.Append("CENTER 4\r\n");
-                label.AppendFormat(LabelCulture, "T 5 0 2.8 {0} {1}\r\n", verticalOffset, "Fulde");
+                label.AppendFormat(LabelCulture, "T 5 0 2.8 {0} {1}\r\n", verticalOffset, "Fulla");
 
                 if (hasFullsFaulty)
                 {
                     label.Append("CENTER 5.55\r\n");
-                    label.AppendFormat(LabelCulture, "T 5 0 4.8 {0} {1}\r\n", verticalOffset, "Fulde");
+                    label.AppendFormat(LabelCulture, "T 5 0 4.8 {0} {1}\r\n", verticalOffset, "Fulla");
                 }
 
                 if (hasFullsCollected)
                 {
                     label.Append("CENTER 6.95\r\n");
-                    label.AppendFormat(LabelCulture, "T 5 0 6.45 {0} {1}\r\n", verticalOffset, "Fulde");
+                    label.AppendFormat(LabelCulture, "T 5 0 6.45 {0} {1}\r\n", verticalOffset, "Fulla");
                 }
 
                 label.Append("CENTER 8.55\r\n");
@@ -292,7 +290,7 @@ namespace Primagaz.Android
 
                 // Totals
                 label.Append("LEFT\r\n");
-                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Saldo");
+                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Totalt");
                 label.Append("CENTER 4\r\n");
                 label.AppendFormat(LabelCulture, "T 5 0 2.8 {0} {1}\r\n", verticalOffset,
                     docketItems.Sum(x => x.FullsDelivered));
@@ -326,7 +324,7 @@ namespace Primagaz.Android
             verticalOffset = verticalOffset + (dcItemVerticalOffset);
 
             label.Append("LEFT\r\n");
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "* UN 1965, Carbonhydrid gasblanding, fordråbet, N.O.S., 2.1, (B/D)");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "* UN 1965 Kolvätegasblandning, kondenserad N. O. S. (Blandning C), 2.1 (B/D)");
             verticalOffset = verticalOffset + dcItemVerticalOffset;
 
             label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "* Gasflasker");
@@ -336,8 +334,8 @@ namespace Primagaz.Android
 
             if (docket.SignaturePath != null)
             {
-                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Kundens underskrift");
-                label.AppendFormat(LabelCulture, "T 5 0 4.8 {0} {1}\r\n", verticalOffset, "Chaufførs ID");
+                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Mottagarens underskrift");
+                label.AppendFormat(LabelCulture, "T 5 0 4.8 {0} {1}\r\n", verticalOffset, "Chaufförens ID");
 
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
                 label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, docket.CustomerPrintName);
@@ -359,13 +357,13 @@ namespace Primagaz.Android
                 label.AppendFormat(LabelCulture, "L 0.5 {0} 10 {0} 0.03\r\n", verticalOffset);
 
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
-                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Før denne levering er udlånssaldoen:");
+                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Före denna leverans är lånebalansen:");
 
                 verticalOffset = verticalOffset + 0.2M;
                 verticalOffset = verticalOffset + (dcItemVerticalOffset * 2);
 
                 //dcVerticalOffset = dcVerticalOffset + (dcItemVerticalOffset * 2);
-                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Flaske");
+                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Flaska");
                 label.Append("RIGHT 4\r\n");
                 label.AppendFormat(LabelCulture, "T 5 0 2.3 {0} {1}\r\n", verticalOffset, "Stk");
 
@@ -391,7 +389,7 @@ namespace Primagaz.Android
                 label.AppendFormat(LabelCulture, "L 0.5 {0} 5 {0} 0.03\r\n", verticalOffset);
 
                 verticalOffset = verticalOffset + dcLargeLineOffset;
-                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Saldo");
+                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", verticalOffset, "Totalt");
 
                 label.Append("RIGHT 4\r\n");
                 label.AppendFormat(LabelCulture, "T 5 0 2.3 {0} {1}\r\n", verticalOffset,
@@ -403,15 +401,15 @@ namespace Primagaz.Android
 
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
                 label.AppendFormat(LabelCulture, "T 5 0.5 0.5 {0} {1}\r\n", verticalOffset,
-                                   "Kontakt os venligst indenfor 1 uge på kundeservice@primagaz.dk,");
+                                   "Kontakta oss inom 1 vecka kundeservice@primagaz.se,");
 
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
                 label.AppendFormat(LabelCulture, "T 5 0.5 0.5 {0} {1}\r\n", verticalOffset,
-                                   "hvis udlånsbeholdningen ikke stemmer");
+                                   "om låneportföljen inte röstar");
 
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
                 label.AppendFormat(LabelCulture, "T 5 0.5 0.5 {0} {1}\r\n", verticalOffset,
-                                   "Ellers betragtes udlånssaldoen som gældende.");
+                                   "I annat fall anses lånebalansen vara tillämplig.");
 
                 verticalOffset = verticalOffset + dcItemVerticalOffset;
 
@@ -450,7 +448,7 @@ namespace Primagaz.Android
         /// </summary>
         /// <returns>The on stop label.</returns>
         /// <param name="customers">Customers.</param>
-        public static string GetDenmarkOnStopLabel(List<Customer> customers)
+        public static string GetOnStopLabel(List<Customer> customers)
         {
             const decimal margin = 0.6M;
 
@@ -465,7 +463,7 @@ namespace Primagaz.Android
 
             // T [Font Size] [0] [X] [Y]
             // Header
-            label.AppendFormat(LabelCulture, "T 4 0 0.5 1  STOP FOR LEVERING\r\n");
+            label.AppendFormat(LabelCulture, "T 4 0 0.5 1 STOP FOR LEVERING\r\n");
             label.AppendFormat(LabelCulture, "T 5 0 7.5 1 {0}: {1}\r\n", "Dato",
                 DateTime.Today.ToString("dd/MM/yyyy"));
             label.AppendFormat(LabelCulture, "L 0.5 1.8 10 1.8 0.03\r\n");
@@ -480,7 +478,7 @@ namespace Primagaz.Android
             // Table Body Offset is 4.2cm
             var offset = 3M;
 
-            var printedCustomers = new List<String>();
+            var printedCustomers = new List<string>();
 
             foreach (var customer in customers)
             {
@@ -490,7 +488,7 @@ namespace Primagaz.Android
                 label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n",
                                    offset, customer.CustomerAccountNumber);
 
-                if (!String.IsNullOrEmpty(customer.CustomerName1))
+                if (!string.IsNullOrEmpty(customer.CustomerName1))
                 {
 
                     label.AppendFormat(LabelCulture, "T 5 0 2.4 {0} {1}\r\n",
@@ -498,14 +496,14 @@ namespace Primagaz.Android
                     offset = offset + margin;
                 }
 
-                if (!String.IsNullOrEmpty(customer.Address1))
+                if (!string.IsNullOrEmpty(customer.Address1))
                 {
                     label.AppendFormat(LabelCulture, "T 5 0 2.4 {0} {1}\r\n",
                                        offset, customer.Address1);
                     offset = offset + margin;
                 }
 
-                if (!String.IsNullOrEmpty(customer.PostCode))
+                if (!string.IsNullOrEmpty(customer.PostCode))
                 {
                     label.AppendFormat(LabelCulture, "T 5 0 2.4 {0} {1} {2}\r\n",
                         offset, customer.PostCode, customer.Address4);
@@ -548,7 +546,7 @@ namespace Primagaz.Android
             label.AppendFormat(LabelCulture, "T 4 0 0.5 1.3 {0}\r\n", "Godsdeklaration");
             label.AppendFormat(LabelCulture, "T 5 0 6.6 1.3 {0}: {1}\r\n", "Dato", DateTime.Today.ToString("dd/MM/yyyy"));
             label.AppendFormat(LabelCulture, "L 0.5 2.0 10 2.0 0.03\r\n");
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 2.2 {0}: {1}\r\n", "Chauffør", driver);
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 2.2 {0}: {1}\r\n", "Förare", driver);
             label.AppendFormat(LabelCulture, "T 5 0 4.2 2.2 {0}: {1}\r\n", "Reg. Nr.", "");
             label.AppendFormat(LabelCulture, "T 5 0 6.6 2.2 {0}: {1}\r\n", "Tur", runNumber);
             label.AppendFormat(LabelCulture, "T 5 0 0.5 2.8 {0}: {1}\r\n", "Bil", trailer);
@@ -559,9 +557,9 @@ namespace Primagaz.Android
 
             // Table Header
             label.AppendFormat(LabelCulture, "T 5 0 0.5 3.5 {0}\r\n", "Produkt");
-            label.AppendFormat(LabelCulture, "T 5 0 2.4 3.5 {0}*\r\n", "Fulde");
-            label.AppendFormat(LabelCulture, "T 5 0 3.5 3.5 {0}\r\n", "Vægt Netto kg");
-            label.AppendFormat(LabelCulture, "T 5 0 5.7 3.5 {0}\r\n", "Vægt Brutto kg");
+            label.AppendFormat(LabelCulture, "T 5 0 2.4 3.5 {0}*\r\n", "Fulla");
+            label.AppendFormat(LabelCulture, "T 5 0 3.5 3.5 {0}\r\n", "Netto kg");
+            label.AppendFormat(LabelCulture, "T 5 0 5.7 3.5 {0}\r\n", "Brutto kg");
             label.AppendFormat(LabelCulture, "T 5 0 8.2 3.5 {0}**\r\n", "Tom");
             label.AppendFormat(LabelCulture, "L 0.5 4.0 10 4.0 0.03\r\n");
 
@@ -614,7 +612,7 @@ namespace Primagaz.Android
 
             label.AppendFormat(LabelCulture, "LEFT 0.5\r\n");
 
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "Saldo");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "Totalt");
 
             label.AppendFormat(LabelCulture, "RIGHT 3\r\n");
 
@@ -646,23 +644,23 @@ namespace Primagaz.Android
             label.AppendFormat(LabelCulture, "LEFT 0.5\r\n");
             offset = offset + margin;
 
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "* UN 1965, Carbonhydrid gasblanding, fordråbet, N.O.S., 2.1, (B/D)");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "* UN 1965 Kolvätegasblandning, kondenserad N. O. S.");
 
             offset = offset + margin;
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "fordråbet, n.o.s., 2.1, (B/D)");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "(Blandning C), 2.1 (B/D)");
 
             offset = offset + margin;
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "* Gasflasker");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "* GASFLASKOR");
 
             offset = offset + margin;
-            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "** Tom flaske, 2.1");
+            label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}\r\n", offset, "** Tömt kärl, 2.1");
 
             offset = offset + margin;
             offset = offset + margin;
             offset = offset + margin;
 
-            label.AppendFormat(LabelCulture, "T 4 0 0.5 {0} {1}\r\n", offset, "Leveringsoversigt");
-            label.AppendFormat(LabelCulture, "T 5 0 6.5 {0} {1}: {2}\r\n", offset, "Dato",
+            label.AppendFormat(LabelCulture, "T 4 0 0.5 {0} {1}\r\n", offset, "Leverans översikt");
+            label.AppendFormat(LabelCulture, "T 5 0 6.5 {0} {1}: {2}\r\n", offset, "Datum",
                 DateTime.Today.ToString("dd/MM/yyyy"));
 
             offset = offset + margin;
@@ -682,23 +680,23 @@ namespace Primagaz.Android
             // Iterate through the Customers
             foreach (var call in calls)
             {
-                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}: {2}\r\n", offset, "Order", String.Empty);
+                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}: {2}\r\n", offset, "Order", string.Empty);
 
                 label.AppendFormat(LabelCulture, "T 5 0 4.5 {0} {1} {2}\r\n", offset, call.CustomerName1, call.OnStop.GetValueOrDefault() ? "(STOP)" : "");
                 offset = offset + margin;
 
-                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}: {2}\r\n", offset, "Kundenr", call.CustomerAccountNumber);
+                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}: {2}\r\n", offset, "Kund nr", call.CustomerAccountNumber);
                 label.AppendFormat(LabelCulture, "T 5 0 4.5 {0} {1}\r\n", offset, call.Address1);
 
                 offset = offset + margin;
 
-                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}: {2}\r\n", offset, "Tlf nr.", String.Empty);
+                label.AppendFormat(LabelCulture, "T 5 0 0.5 {0} {1}: {2}\r\n", offset, "Tlf nr.", string.Empty);
                 label.AppendFormat(LabelCulture, "T 5 0 4.5 {0} {1} {2}\r\n", offset, call.PostCode, call.Address4);
                 offset = offset + margin;
 
                 if (call.Visited)
                 {
-                    var resource = !String.IsNullOrWhiteSpace(call.NonDeliveryReason) ? call.NonDeliveryReason : "Besøgte";
+                    var resource = !string.IsNullOrWhiteSpace(call.NonDeliveryReason) ? call.NonDeliveryReason : "Besøgte";
                     label.AppendFormat(LabelCulture, "T 5 0 4.5 {0} ** {1} **\r\n", offset, resource);
                     offset = offset + margin;
                 }

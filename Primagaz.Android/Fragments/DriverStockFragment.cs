@@ -172,9 +172,15 @@ namespace Primagaz.Android
                         driverStock.ForEach(driverStockItem =>
                         {
                             if (stockType == StockType.Fulls)
+                            {
                                 driverStockItem.Fulls = 0;
+                                driverStockItem.FaultyFulls = 0;
+                            }
                             else
+                            {
                                 driverStockItem.Empties = 0;
+                                driverStockItem.FaultyEmpties = 0;
+                            }
                         });
 
                         repository.SaveChanges();
