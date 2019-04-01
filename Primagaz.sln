@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primagaz.Android", "Primagaz.Android\Primagaz.Android.csproj", "{F4F571B1-DE5D-4D92-9F81-4847FE88D536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primagaz.Standard", "Primagaz.Standard\Primagaz.Standard.csproj", "{BC7FBA51-E224-4826-9772-FEE2DC103342}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4F571B1-DE5D-4D92-9F81-4847FE88D536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F571B1-DE5D-4D92-9F81-4847FE88D536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F571B1-DE5D-4D92-9F81-4847FE88D536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F571B1-DE5D-4D92-9F81-4847FE88D536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7FBA51-E224-4826-9772-FEE2DC103342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7FBA51-E224-4826-9772-FEE2DC103342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7FBA51-E224-4826-9772-FEE2DC103342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7FBA51-E224-4826-9772-FEE2DC103342}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
